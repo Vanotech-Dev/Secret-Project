@@ -4,7 +4,7 @@ export const content = {
   senderName: "Revano",
   salutation: "Dari anak yang sering ngelawan :V",
   paragraphs1: [
-    "Mak, hari ini di tanggal 28 april ini umur umak sudah 40 tahun. Jujur aja, pas bikin surat ini bingung gak tau mau ngetik nok ape. Ditambah la lama aku dak pernah hadiah idang umak",
+    "Mak, hari ini di tanggal 28 april ini umur umak sudah 40 tahun. Jujur aja, pas bikin surat ini bingung gak tau mau ngetik nok ape. Ditambah la lama aku dak pernah bikin hadiah idang umak",
 
     "Di usia ikam yang la 40 tahun ini ditambah dengan ikam la jadi kepala Sekolah ditambah jauh sekolah ikam, jadi makin berat tanggung jawab ikam. Aku minta maaf cuman bisa ngasih ucapan ini karne kalo langsung ke ikam nye dak nyaman aku hehe",
 
@@ -23,26 +23,26 @@ export const content = {
 
   photos: [
     {
-      src: "public/photos/1.png",
+      src: "/photos/1.png",
       caption: "Era Covid",
       rotation: -3,
     },
     {
-      src: "public/photos/dua.png",
+      src: "/photos/dua.png",
       caption: "Wisuda TPA",
       rotation: -2,
     },
     {
-      src: "public/photos/tiga.png",
+      src: "/photos/tiga.png",
       caption: "Pas aku Masih kecil",
       rotation: -2,
     },
     {
-      src: "public/photos/4.png",
+      src: "/photos/4.png",
       caption: "Lebaran 2026",
       rotation: 4,
     },
   ],
   closingMessage: "Dengan cinta yang tak terhingga,",
-  audioSrc: "public/music/twentySomething.mp3",
+  audioSrc: "/music/twentySomething.mp3",
 };
