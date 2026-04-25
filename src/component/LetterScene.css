@@ -1,0 +1,239 @@
+/* ============================================
+   SCENE 2 — LETTER
+============================================ */
+
+.letter-scene {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeInPlace 0.5s ease both;
+}
+
+/* Dark blurred overlay */
+.letter-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(12, 7, 3, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* Close button */
+.letter-close {
+  position: fixed;
+  top: 20px;
+  right: 24px;
+  z-index: 60;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: var(--text-on-dark);
+  font-size: 1.2rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s, transform 0.3s;
+  backdrop-filter: blur(4px);
+}
+
+.letter-close:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: scale(1.1);
+}
+
+/* Scroll container */
+.letter-scroll-container {
+  position: relative;
+  z-index: 45;
+  max-height: 92vh;
+  overflow-y: auto;
+  padding: 24px 16px;
+  width: 100%;
+  scroll-behavior: smooth;
+}
+
+/* === Letter Paper === */
+.letter-paper {
+  width: 100%;
+  max-width: 680px;
+  margin: 0 auto;
+  background:
+    /* Subtle horizontal lines */
+    repeating-linear-gradient(transparent,
+      transparent 31px,
+      rgba(180, 160, 130, 0.15) 31px,
+      rgba(180, 160, 130, 0.15) 32px),
+    /* Paper gradient */
+    linear-gradient(to bottom,
+      #F8F1E4 0%,
+      #F5EDDA 30%,
+      #F2E9D4 100%);
+  border-radius: 3px;
+  box-shadow:
+    0 4px 30px rgba(0, 0, 0, 0.2),
+    0 1px 3px rgba(0, 0, 0, 0.1),
+    inset 0 0 80px rgba(180, 160, 130, 0.08);
+  animation: letterEntrance 0.7s ease both;
+}
+
+/* Decorative inner border */
+.letter-inner-border {
+  margin: 20px;
+  padding: 36px 32px;
+  border: 1px solid rgba(184, 134, 11, 0.18);
+  position: relative;
+}
+
+/* Corner ornaments */
+.letter-inner-border::before,
+.letter-inner-border::after {
+  content: "✦";
+  position: absolute;
+  color: var(--gold);
+  font-size: 10px;
+  opacity: 0.4;
+}
+
+.letter-inner-border::before {
+  top: 6px;
+  left: 10px;
+}
+
+.letter-inner-border::after {
+  bottom: 6px;
+  right: 10px;
+}
+
+/* === Header === */
+.letter-header {
+  text-align: center;
+  margin-bottom: 24px;
+  animation: fadeIn 0.6s ease 0.2s both;
+}
+
+.letter-header .ornament {
+  display: block;
+  color: var(--gold);
+  font-size: 14px;
+  opacity: 0.5;
+  margin: 8px 0;
+  letter-spacing: 8px;
+}
+
+.letter-recipient {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(1.8rem, 5vw, 2.6rem);
+  color: var(--text-dark);
+  letter-spacing: 0.03em;
+  line-height: 1.2;
+}
+
+.letter-age {
+  font-family: var(--font-handwrite);
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  color: var(--gold);
+  margin-top: 8px;
+}
+
+/* Divider */
+.letter-divider {
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  margin: 28px auto;
+  opacity: 0.5;
+}
+
+/* === Salutation === */
+.letter-salutation {
+  font-family: var(--font-handwrite);
+  font-size: clamp(1.15rem, 3vw, 1.4rem);
+  color: var(--text-dark);
+  margin-bottom: 24px;
+  animation: fadeIn 0.6s ease 0.4s both;
+}
+
+/* === Body === */
+.letter-body {
+  margin-bottom: 12px;
+}
+
+.letter-paragraph {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: clamp(0.95rem, 2.2vw, 1.08rem);
+  color: var(--text-mid);
+  line-height: 1.85;
+  margin-bottom: 20px;
+  text-align: justify;
+  animation: fadeIn 0.5s ease both;
+}
+
+.letter-paragraph:last-child {
+  margin-bottom: 0;
+}
+
+/* === Polaroid Gallery === */
+.polaroid-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  padding: 12px 0;
+}
+
+/* === Closing === */
+.letter-closing {
+  text-align: right;
+  margin-top: 8px;
+  animation: fadeIn 0.6s ease 1.4s both;
+}
+
+.closing-message {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: clamp(0.95rem, 2.2vw, 1.08rem);
+  color: var(--text-mid);
+  margin-bottom: 16px;
+}
+
+.closing-sender {
+  font-family: var(--font-handwrite);
+  font-size: clamp(1.4rem, 4vw, 1.8rem);
+  color: var(--text-dark);
+  letter-spacing: 0.02em;
+}
+
+/* ============================================
+   RESPONSIVE
+============================================ */
+@media (max-width: 640px) {
+  .letter-inner-border {
+    margin: 12px;
+    padding: 24px 18px;
+  }
+
+  .letter-scroll-container {
+    padding: 16px 8px;
+  }
+
+  .polaroid-gallery {
+    gap: 16px;
+  }
+
+  .letter-close {
+    top: 12px;
+    right: 12px;
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+}

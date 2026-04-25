@@ -1,0 +1,16 @@
+.petal-container {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 100;
+  overflow: hidden;
+}
+
+.petal {
+  position: absolute;
+  top: -20px;
+  border-radius: 80% 0 55% 50% / 55% 0 80% 50%;
+  animation: petalFall linear infinite;
+  will-change: transform;
+  filter: blur(0.5px);
+}
